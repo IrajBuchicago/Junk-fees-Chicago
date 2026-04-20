@@ -281,24 +281,25 @@ footer {
 
 <!-- SECTION 3: CHICAGO MAP -->
 <div class="section">
-  <div class="section-title">Chicago Neighborhoods: Estimated Fee Burden (2024)</div>
+  <div class="section-title">Chicago Neighborhoods: Estimated Fee Burden</div>
   <div class="card" style="padding:20px">
     <div style="margin-bottom:16px">
       <h2 style="margin-bottom:4px">Junk Fee Burden by Community Area</h2>
       <p style="font-size:12px;color:var(--muted);line-height:1.6">
-        Circle size = renter household count (ACS 2022). Color = estimated annual fee burden per household.
-        Click any area for details. Methodology below the map.
+        Each circle is a Chicago community area. <strong>Circle size</strong> = number of renter households (ACS 2022).
+        <strong>Circle color</strong> = estimated annual junk fee burden per household, based on median rent (RentCafe 2026 where available, ACS 2022 otherwise) and corporate landlord presence.
+        Darker red = higher burden. Click any circle for full details and data source.
       </p>
     </div>
     <div id="map"></div>
     <div class="note" style="margin-top:16px">
       <strong>Methodology (no interpolation):</strong> Chicago does not collect neighborhood-level junk fee data. This is a key gap that PRO Component 02 (Rental Registry) would fill.<br><br>
       <strong>What the estimate uses:</strong><br>
-      1. <strong>Median gross rent</strong> by community area from ACS 5-Year 2022 (Table B25064). These are reported values, not estimates.<br>
+      1. <strong>Median rent</strong> by community area: RentCafe/Yardi Matrix (March 2026, buildings 50+ units) for 14 neighborhoods with direct matches. ACS 5-Year 2022 (Table B25064) for remaining areas.<br>
       2. <strong>Fee burden rate:</strong> Urban Institute (2024) documents 10-30% of base rent at large corporate-managed properties. We apply 25% for High corporate-landlord areas, 18% for Medium, 12% for Low.<br>
       3. <strong>Corporate landlord classification:</strong> Based on CMAP land use data on Class A/B multifamily density. "High" = significant professionally managed multifamily stock. "Low" = predominantly small landlords and 2-4 flats.<br>
       4. <strong>Annual burden</strong> = monthly rent x fee rate x 12. This is a range estimate, not observed data.<br><br>
-      <em>Sources: ACS 5-Year 2022, Urban Institute (2024), CMAP land use data.</em>
+      <em>Sources: RentCafe/Yardi Matrix (Mar 2026), ACS 5-Year 2022, Urban Institute (2024), CMAP land use data.</em>
     </div>
   </div>
 </div>
@@ -331,25 +332,28 @@ footer {
       <h2>What Happened After Implementation</h2>
 
       <h3>NYC FARE Act: Rent Changes by Borough (Jun-Oct 2025)</h3>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:8px">Year-over-year change in median asking rent after the FARE Act shifted broker fees from tenants to landlords. Each bar shows how much higher asking rents were compared to the same month one year prior.</p>
       <div class="chart-container" style="height:200px"><canvas id="nycChart"></canvas></div>
-      <div class="source-line">Source: StreetEasy market reports, Jun-Oct 2025</div>
+      <div class="source-line">Source: StreetEasy market reports, Jun-Oct 2025. Bars show year-over-year % change in median asking rent.</div>
 
       <h3>NYC Long-Term: Fee-Charging vs. No-Fee Units</h3>
+      <p style="font-size:12px;color:var(--muted);margin-bottom:8px">Median annual rent growth: listings that never charged broker fees vs. listings that did charge them. The only multi-year comparative dataset for any U.S. market.</p>
       <div style="display:flex;gap:12px;margin:14px 0">
         <div class="fact" style="flex:1;border-color:rgba(27,107,147,0.2)">
           <div class="lbl">2012-2019 (Pre-pandemic)</div>
-          <div class="num" style="font-size:20px;color:#fff">2.3% vs 2.1%</div>
-          <div class="lbl" style="color:var(--teal)">No meaningful difference</div>
+          <div class="lbl" style="margin:4px 0;font-size:10px;color:var(--muted)">Median annual rent growth</div>
+          <div class="num" style="font-size:20px;color:var(--text)">2.3% vs 2.1%</div>
+          <div class="lbl" style="color:var(--teal)">No-fee units vs fee-charging units: virtually identical growth</div>
           <div class="s">StreetEasy Research, 2024</div>
         </div>
         <div class="fact" style="flex:1;border-color:rgba(230,57,70,0.2)">
           <div class="lbl">2022-2024 (Post-pandemic)</div>
-          <div class="num" style="font-size:20px;color:#fff">4.2% vs 6.1%</div>
-          <div class="lbl" style="color:var(--red)">Fee units grew 45% faster</div>
+          <div class="lbl" style="margin:4px 0;font-size:10px;color:var(--muted)">Median annual rent growth</div>
+          <div class="num" style="font-size:20px;color:var(--text)">4.2% vs 6.1%</div>
+          <div class="lbl" style="color:var(--red)">No-fee units grew slower; fee-charging units grew 45% faster</div>
           <div class="s">StreetEasy Research, 2024-2025</div>
         </div>
       </div>
-      <p style="font-size:12px;color:var(--muted);line-height:1.5;margin:8px 0">The only multi-year comparative dataset available for any U.S. market. Median annual rent growth for no-fee vs. fee-charging listings on StreetEasy.</p>
 
       <h3>Colorado HB25-1090: Documented Substitution Case (Jan 2026)</h3>
       <div class="fact-row">
