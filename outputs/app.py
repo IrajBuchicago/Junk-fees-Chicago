@@ -1,6 +1,6 @@
 """
 Junk Fees Chicago - Streamlit Dashboard
-Office of the Mayor, City of Chicago | PRO RLTO Reform (Component 01)
+Draft - subject to change, City of Chicago | PRO RLTO Reform (Component 01)
 April 2026 | CONFIDENTIAL & PRE-DECISIONAL
 MAP_VERIFIED: coordinates checked against canonical Chicago community-area
 centroids on 2026-04-20; 6 misplacements corrected (Fuller Park 1.7 mi,
@@ -226,7 +226,7 @@ st.markdown("""
 <div class="main-header">
     <h1>Junk Fees Chicago</h1>
     <p>How hidden rental fees burden Chicago neighborhoods, and what the data shows</p>
-    <div class="badges">Office of the Mayor | RLTO Reform, PRO Component 01 | April 2026 | Confidential & Pre-Decisional</div>
+    <div class="badges"> Draft - subject to change | RLTO Reform, PRO Component 01 | April 2026 | Confidential & Pre-Decisional</div>
 </div>
 """, unsafe_allow_html=True)
 
